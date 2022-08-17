@@ -1,0 +1,19 @@
+<main class="row">
+    <section class="col-md-3" *ngFor="let movie of data ;let i = index">
+        <div class="card">
+            <div>
+                <div class="thumbnail">
+                    <img [src]="movie.thumbnail" alt="Movie Thumbnail" class="image">
+                </div>
+                <div class="info">
+                    <p>{{movie?.name}}</p>
+                    <div class="icons">
+                        <i class="fa fa-heart" [ngClass]="movie.isLiked ? 'liked' : 'not_liked'"
+                            (click)="toggleLike(i)"></i>
+                        <i class="fa fa-comment not_liked"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

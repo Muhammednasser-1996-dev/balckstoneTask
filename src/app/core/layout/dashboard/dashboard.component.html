@@ -1,0 +1,17 @@
+<div class="side">
+    <mat-sidenav-container class="sidenav-container">
+        <mat-icon>menu</mat-icon>
+        <mat-sidenav #sidenav [mode]="'side'" [position]="'start'" class="example-sidenav" [opened]="opened"
+            [ngStyle]="{ 'width.em': 16 }">
+            <mat-nav-list>
+                sideBar
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <app-header-dashboard (toggleSideNav)="sidenav.toggle()"></app-header-dashboard>
+            <main class="page-content container-fluid">
+                <router-outlet></router-outlet>
+            </main>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="header">
+        <h3>
+            Feeds
+        </h3>
+        <div class="filters">
+            <button class="btns" *ngFor="let lable of btnLabels; let i = index" (click)="getCategory(i, lable)">
+                <p [class.active]="selectedIndex === i">{{lable}}</p>
+            </button>
+        </div>
+    </div>
+    <div class="movies" *ngIf="!!data">
+        <app-card (isLikedMovie)="isLikedHandler($event)" [data]="data"></app-card>
+    </div>
+
+    <app-loader [loaderIndicator]="loader"></app-loader>
+</div>
