@@ -27,7 +27,7 @@
     }
     .icons {
       @include positions;
-      justify-content: end;
+      justify-content: flex-end;
       gap: 1rem;
       i {
         font-size: 1.4rem;
